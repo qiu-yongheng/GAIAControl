@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~ Copyright 2017 Qualcomm Technologies International, Ltd.                                      ~
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+    android:id="@+id/layout_battery_main">
+
+
+    <!-- __________________________ TOOLBAR __________________________ -->
+
+    <include
+        android:id="@+id/tb_menu"
+        layout="@layout/toolbar"/>
+
+
+    <!-- __________________________ DISCONNECTION MESSAGE __________________________ -->
+
+    <TextView
+        android:id="@+id/tv_bar_alert_connection_state"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tb_menu"
+        android:padding="@dimen/padding_settings_horizontal"
+        android:background="@color/highlight_bar_background"
+        android:textColor="@color/highlight_bar_text"
+        android:text="@string/alert_message_disconnected"
+        android:visibility="gone" />
+
+    <!-- __________________________ NOT AVAILABLE MESSAGE __________________________ -->
+    <TextView
+        android:id="@+id/tv_battery_unavailable"
+        style="@style/AppTheme.Text.Secondary"
+        android:layout_width="match_parent"
+        android:textAlignment="center"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_bar_alert_connection_state"
+        android:layout_margin="@dimen/padding_settings_horizontal"
+        android:text="@string/text_unavailable"
+        android:textStyle="italic"
+        android:visibility="gone" />
+
+
+    <!-- __________________________ BATTERY GRID __________________________ -->
+
+    <GridLayout
+        android:id="@+id/grid_battery_levels"
+        android:layout_below="@id/tv_battery_unavailable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2" >
+
+    </GridLayout>
+
+</RelativeLayout>

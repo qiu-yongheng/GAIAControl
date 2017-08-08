@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~ Copyright 2017 Qualcomm Technologies International, Ltd.                                      ~
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <ImageButton
+        android:id="@+id/bt_pause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:background="@drawable/remote_top_button"
+        android:contentDescription="@string/empty_content_description"
+        android:paddingRight="@dimen/padding_remote_big"
+        android:paddingLeft="@dimen/padding_remote_big"
+        android:paddingTop="@dimen/padding_remote_small"
+        android:paddingBottom="@dimen/padding_remote_small"
+        android:src="@drawable/ic_pause_48dp"
+        android:layout_above="@+id/ll_rewind_play_forward"
+        android:layout_centerInParent="true"
+        android:tint="@color/button_remote_image"/>
+
+    <LinearLayout
+        android:id="@id/ll_rewind_play_forward"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <!-- Button rewind -->
+        <ImageButton
+            android:id="@+id/bt_rewind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/remote_left_button"
+            android:contentDescription="@string/empty_content_description"
+            android:src="@drawable/ic_rewind_48dp"
+            android:paddingRight="@dimen/padding_remote_small"
+            android:paddingLeft="@dimen/padding_remote_small"
+            android:paddingTop="@dimen/padding_remote_big"
+            android:paddingBottom="@dimen/padding_remote_big"
+            android:tint="@color/button_remote_image" />
+
+        <!-- Button play -->
+        <ImageButton
+            android:id="@+id/bt_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/remote_rounded_rectangle_button"
+            android:contentDescription="@string/empty_content_description"
+            android:src="@drawable/ic_play_48dp"
+            android:paddingRight="@dimen/padding_remote_big"
+            android:paddingLeft="@dimen/padding_remote_big"
+            android:paddingTop="@dimen/padding_remote_big"
+            android:paddingBottom="@dimen/padding_remote_big"
+            android:tint="@color/button_remote_image" />
+
+        <!-- Button forward -->
+        <ImageButton
+            android:id="@+id/bt_forward"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/remote_right_button"
+            android:contentDescription="@string/empty_content_description"
+            android:src="@drawable/ic_forward_48dp"
+            android:paddingRight="@dimen/padding_remote_small"
+            android:paddingLeft="@dimen/padding_remote_small"
+            android:paddingTop="@dimen/padding_remote_big"
+            android:paddingBottom="@dimen/padding_remote_big"
+            android:tint="@color/button_remote_image" />
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/bt_stop"
+        android:layout_below="@id/ll_rewind_play_forward"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|top"
+        android:background="@drawable/remote_bottom_button"
+        android:contentDescription="@string/empty_content_description"
+        android:paddingRight="@dimen/padding_remote_big"
+        android:paddingLeft="@dimen/padding_remote_big"
+        android:paddingTop="@dimen/padding_remote_small"
+        android:paddingBottom="@dimen/padding_remote_small"
+        android:src="@drawable/ic_stop_48dp"
+        android:tint="@color/button_remote_image" />
+
+</RelativeLayout>

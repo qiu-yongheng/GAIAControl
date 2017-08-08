@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~ Copyright 2017 Qualcomm Technologies International, Ltd.                                      ~
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:gravity="center" >
+
+    <TextView
+        android:id="@+id/tv_rr_interval_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/heart_rate_no_value"
+        android:layout_columnWeight="1"
+        android:textAlignment="center"
+        style="@style/AppTheme.Subtitle"
+        android:textSize="@dimen/text_size_heart_rate_values" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/material_classic_padding_half"
+        android:text="@string/heart_rate_rr_intervals_unit"
+        style="@style/AppTheme.Subtitle"
+        android:textSize="@dimen/text_size_heart_rate_values" />
+
+</LinearLayout>

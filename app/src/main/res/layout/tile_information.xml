@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~ Copyright 2017 Qualcomm Technologies International, Ltd.                                      ~
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="@drawable/tile_device"
+    style="@style/AppTheme.Tile.Info" >
+
+    <ImageView
+        android:id="@+id/iv_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/ic_info_18dp"
+        android:contentDescription="@string/empty_content_description" />
+
+    <ImageView
+        android:id="@+id/iv_battery"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_battery_unknown_32dp"
+        android:tint="@color/white"
+        android:contentDescription="@string/empty_content_description"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/iv_signal"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@id/iv_battery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_signal_unknown_white_32dp"
+        android:contentDescription="@string/empty_content_description"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:layout_margin="@dimen/padding_tiles_inside_half"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tv_device_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textSize="@dimen/text_size_tile_title"
+            android:textColor="@color/text_tile"
+            android:fontFamily="sans-serif-medium"
+            android:ellipsize="end"
+            android:lines="1" />
+
+        <!-- ============== The container of device states: connection & bond ============== -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <!-- ============== CONNECTION STATE ============== -->
+            <TextView
+                android:id="@+id/tv_device_connection_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/device_state_connection_unknown"
+                android:textAlignment="viewEnd"
+                android:textSize="@dimen/text_size_tile_subtitle"
+                android:textColor="@color/text_tile" />
+
+            <!-- separator -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_view_separator"
+                android:textAlignment="center"
+                android:textSize="@dimen/text_size_tile_subtitle"
+                android:textColor="@color/text_tile" />
+
+            <!-- ============== BOND STATE ============== -->
+            <TextView
+                android:id="@+id/tv_device_bond_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/device_state_bond_unknown"
+                android:textAlignment="viewStart"
+                android:textSize="@dimen/text_size_tile_subtitle"
+                android:textColor="@color/text_tile" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_device_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@id/iv_signal"
+        android:gravity="bottom"
+        android:textColor="@color/text_tile"
+        android:layout_marginStart="@dimen/padding_tiles_inside_half"
+        android:layout_marginBottom="@dimen/padding_tiles_inside_half" />
+
+</RelativeLayout>

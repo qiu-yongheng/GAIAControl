@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~ Copyright 2017 Qualcomm Technologies International, Ltd.                                      ~
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_fragment"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:paddingBottom="@dimen/margin_vertical"
+    android:visibility="gone" >
+
+    <TextView
+        android:id="@+id/tv_speaker_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/AppTheme.Title"
+        android:padding="@dimen/margin_vertical" />
+
+    <LinearLayout
+        android:id="@+id/ll_channel_speakers"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="@dimen/margin_vertical">
+
+        <ImageView
+            android:id="@+id/iv_speaker_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/empty_content_description"
+            android:src="@drawable/ic_speaker_left_grey_100dp"
+            android:paddingEnd="@dimen/no_padding"
+            tools:ignore="RtlSymmetry" />
+
+        <ImageView
+            android:id="@+id/iv_speaker_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/empty_content_description"
+            android:src="@drawable/ic_speaker_right_grey_100dp"
+            android:paddingStart="@dimen/no_padding"
+            tools:ignore="RtlSymmetry"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_channel_label"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="@dimen/margin_vertical">
+
+        <ImageButton
+            android:id="@+id/ib_arrow_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/empty_content_description"
+            android:src="@drawable/ic_arrow_left_18dp"
+            style="@style/AppTheme.ImageButton"
+            />
+
+        <TextView
+            android:id="@+id/tv_channel"
+            android:layout_width="140dp"
+            android:textAlignment="center"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorAccent"
+            android:textAllCaps="true" />
+
+        <ImageButton
+            android:id="@+id/ib_arrow_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/empty_content_description"
+            android:src="@drawable/ic_arrow_right_18dp"
+            style="@style/AppTheme.ImageButton" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_volume"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/empty_content_description"
+            android:src="@drawable/ic_volume_40dp" />
+
+        <SeekBar
+            android:id="@+id/sb_volume"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

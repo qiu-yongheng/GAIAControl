@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~ Copyright 2017 Qualcomm Technologies International, Ltd.                                      ~
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:padding="@dimen/margin_dialog" >
+
+    <!-- The dialog title -->
+    <TextView
+        style="@style/AppTheme.Text.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/margin_bottom_dialogs_title"
+        android:text="@string/dialog_upgrade_title"/>
+
+    <!-- To display the actual resume point (step) of the upgrade -->
+    <TextView
+        android:id="@+id/tv_step"
+        style="@style/AppTheme.Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_vertical"
+        android:textColor="@color/secondary_text"
+        android:textSize="@dimen/text_size_upgrade_step" />
+
+    <!-- The layout to display during the file upload -->
+    <LinearLayout
+        android:id="@+id/layout_transfer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:gravity="center_vertical">
+
+        <!-- the text view to display the uploaded percentage -->
+        <TextView
+            android:id="@+id/tv_percentage"
+            style="@style/AppTheme.Text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAlignment="textStart"
+            android:textColor="@color/secondary_text"/>
+
+        <!-- the text view to display the remaining time -->
+        <TextView
+            android:id="@+id/tv_time"
+            style="@style/AppTheme.Text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAlignment="textEnd"
+            android:textColor="@color/secondary_text" />
+
+        <!-- the icon to illustrate the time -->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_icon"
+            android:src="@drawable/ic_time_24dp"
+            android:contentDescription="@string/empty_content_description" />
+
+    </LinearLayout>
+
+    <!-- the determinate progress bar to see the upgrade evolution -->
+    <include layout="@layout/progressbar_upgrade" />
+
+    <!-- the indeterminate progress bar to see indeterminate events -->
+    <ProgressBar
+        android:id="@+id/pb_upgrade_indeterminate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@android:color/transparent"
+        android:layout_marginBottom="@dimen/margin_vertical"
+        android:indeterminate="true" />
+
+    <!-- The general error message -->
+    <RelativeLayout
+        android:id="@+id/layout_error"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" >
+
+        <!-- the icon for the error -->
+        <ImageView
+            android:id="@+id/image_warning"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_warning_48dp"
+            android:contentDescription="@string/empty_content_description" />
+
+        <!-- The text view to display the general error message -->
+        <TextView
+            android:layout_toEndOf="@id/image_warning"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/tv_upgrade_error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_vertical"
+            android:text="@string/dialog_upgrade_error"
+            android:textColor="@color/colorAccent" />
+
+        <!-- The text view to display a specific error message -->
+        <TextView
+            android:id="@+id/tv_upgrade_error_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_vertical"
+            android:layout_below="@id/tv_upgrade_error"
+            android:layout_toEndOf="@id/image_warning"
+            android:layout_alignParentEnd="true"
+            android:text="@string/dialog_upgrade_error_from_board"
+            android:textColor="@color/colorAccent" />
+
+        <!-- The message to display the error code -->
+        <TextView
+            android:id="@+id/tv_upgrade_error_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_start_dialog_text_bullets"
+            android:layout_marginTop="@dimen/margin_vertical"
+            android:layout_below="@id/tv_upgrade_error_message"
+            android:layout_toEndOf="@id/image_warning"
+            android:layout_alignParentEnd="true"
+            android:textColor="@color/colorAccent" />
+
+        <!-- The message to display the message code -->
+        <TextView
+            android:id="@+id/tv_upgrade_error_code_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_start_dialog_text_bullets"
+            android:layout_marginTop="@dimen/margin_vertical"
+            android:layout_below="@id/tv_upgrade_error_code"
+            android:layout_toEndOf="@id/image_warning"
+            android:layout_alignParentEnd="true"
+            android:textColor="@color/colorAccent" />
+
+    </RelativeLayout>
+
+</LinearLayout>

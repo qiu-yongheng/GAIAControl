@@ -1,0 +1,86 @@
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~ Copyright 2017 Qualcomm Technologies International, Ltd.                                      ~
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.qualcomm.gaiacontrol.activities.EqualizerActivity">
+
+    <include layout="@layout/toolbar"
+        android:id="@+id/tb_menu" />
+
+    <ScrollView
+        android:layout_below="@id/tb_menu"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/margin_under_toolbar"
+            android:layout_marginBottom="@dimen/margin_horizontal"
+            android:layout_marginEnd="@dimen/margin_horizontal"
+            android:layout_marginStart="@dimen/margin_horizontal">
+
+            <!-- Title for general settings -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/equalizer_general_settings"
+                style="@style/AppTheme.Title" />
+
+            <Switch
+                android:id="@+id/sw_bass"
+                android:text="@string/switch_bass"
+                style="@style/AppTheme.Switch" />
+
+            <TextView
+                android:id="@+id/tv_info_bass_boost"
+                android:text="@string/info_bass_boost_unsupported"
+                style="@style/AppTheme.Switch.Info" />
+
+            <Switch
+                android:id="@+id/sw_3d"
+                android:text="@string/switch_3d"
+                style="@style/AppTheme.Switch" />
+
+            <TextView
+                android:id="@+id/tv_info_3D"
+                android:text="@string/info_3D_unsupported"
+                style="@style/AppTheme.Switch.Info" />
+
+            <!-- Title & Switch for presets -->
+            <Switch
+                android:id="@+id/sw_presets"
+                android:text="@string/switch_presets"
+                style="@style/AppTheme.Switch.Title"
+                android:layout_marginTop="@dimen/margin_top_title" />
+
+            <TextView
+                android:id="@+id/tv_info_custom"
+                android:text="@string/info_custom_unsupported"
+                style="@style/AppTheme.Switch.Info" />
+
+            <!-- PRESETS -->
+
+            <include
+                layout="@layout/layout_presets" />
+
+            <Button
+                android:id="@+id/bt_configure"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/AppTheme.Button.Flat"
+                android:text="@string/button_configure"
+                android:layout_marginBottom="@dimen/margin_horizontal" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

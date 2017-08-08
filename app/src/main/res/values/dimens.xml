@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~ Copyright 2017 Qualcomm Technologies International, Ltd.                                      ~
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+<resources>
+
+    <!-- MARGIN & PADDING -->
+    <dimen name="no_padding">0dp</dimen>
+    <dimen name="no_margin">0dp</dimen>
+    <dimen name="margin_horizontal">@dimen/material_classic_padding</dimen>
+    <dimen name="margin_vertical">@dimen/material_classic_padding_half</dimen>
+    <dimen name="margin_list_item">@dimen/material_classic_padding_quarter</dimen>
+    <dimen name="padding_list_item_horizontal">@dimen/margin_horizontal</dimen>
+    <dimen name="padding_list_item_vertical">@dimen/material_classic_padding_half</dimen>
+    <dimen name="margin_button_flat_vertical">6dp</dimen>
+    <dimen name="margin_button_flat_horizontal">@dimen/material_classic_padding_half</dimen>
+    <dimen name="padding_button_flat_horizontal">@dimen/material_classic_padding_quarter</dimen>
+    <dimen name="margin_tiles">@dimen/material_classic_padding_quarter</dimen>
+    <dimen name="padding_tiles_inside">12dp</dimen>
+    <dimen name="padding_tiles_inside_half">6dp</dimen>
+    <dimen name="margin_remote_volume_button_horizontal">@dimen/material_classic_padding_half</dimen>
+    <dimen name="padding_remote_big">20dp</dimen>
+    <dimen name="padding_remote_small">14dp</dimen>
+    <dimen name="margin_bottom_title">@dimen/material_classic_padding_quarter</dimen>
+    <dimen name="margin_under_toolbar">@dimen/material_classic_padding</dimen>
+    <dimen name="padding_settings_horizontal">@dimen/material_classic_padding</dimen>
+    <dimen name="padding_settings_vertical_title">@dimen/material_classic_padding</dimen>
+    <dimen name="margin_top_title">@dimen/material_classic_padding_half</dimen>
+    <dimen name="padding_button_vertical">@dimen/material_classic_padding_quarter</dimen>
+    <dimen name="margin_dialog">@dimen/material_margin_dialogs</dimen>
+    <dimen name="margin_bottom_dialogs_title">@dimen/material_margin_bottom_dialogs_title</dimen>
+    <dimen name="margin_icon">@dimen/material_classic_padding_half</dimen>
+    <dimen name="margin_start_dialog_text_bullets">@dimen/material_classic_padding</dimen>
+
+    <!-- WIDTHS -->
+    <dimen name="no_layout_width">0dp</dimen>
+    <dimen name="width_threshold_buttons">@dimen/material_min_press_button</dimen>
+    <dimen name="width_threshold_edit_text">64dp</dimen>
+
+    <!-- HEIGHTS -->
+    <dimen name="height_list_item">@dimen/material_height_list_item</dimen>
+    <dimen name="height_button_flat">36dp</dimen>
+    <dimen name="height_toolbar">@dimen/material_height_toolbar</dimen>
+    <dimen name="height_item">@dimen/material_height_item</dimen>
+    <dimen name="height_min_button">@dimen/material_min_press_button</dimen>
+    <dimen name="height_progressbar">5dp</dimen>
+
+    <!-- TEXT SIZES -->
+    <dimen name="text_size_item_title">@dimen/material_text_size_body</dimen>
+    <dimen name="text_size_item_body">@dimen/material_text_size_body</dimen>
+    <dimen name="text_size_message">@dimen/material_text_size_subhead</dimen>
+    <dimen name="text_size_button">@dimen/material_text_size_button</dimen>
+    <dimen name="text_size_tile_title">@dimen/material_text_size_title</dimen>
+    <dimen name="text_size_tile_subtitle">@dimen/material_text_size_subhead</dimen>
+    <dimen name="text_size_section_title">@dimen/material_text_size_subhead</dimen>
+    <dimen name="text_size_settings">@dimen/material_text_size_subhead</dimen>
+    <dimen name="text_size_subtitle">@dimen/material_text_size_body</dimen>
+    <dimen name="text_size_slider_bounds">10sp</dimen>
+    <dimen name="text_size_no_available_file">@dimen/material_text_size_subhead</dimen>
+    <dimen name="text_size_body">@dimen/material_text_size_body</dimen>
+    <dimen name="text_size_upgrade_step">@dimen/material_text_size_subhead</dimen>
+    <dimen name="text_size_title">@dimen/material_text_size_title</dimen>
+    <dimen name="text_size_threshold_buttons">18sp</dimen>
+    <dimen name="text_size_heart_rate_value">36sp</dimen>
+    <dimen name="text_size_heart_rate_values">16sp</dimen>
+
+    <!-- ELEVATIONS -->
+    <dimen name="no_elevation">0dp</dimen>
+    <dimen name="elevation_button_flat">@dimen/no_elevation</dimen>
+    <dimen name="elevation_toolbar">2dp</dimen>
+
+    <!-- CORNERS -->
+    <dimen name="no_corner">0dp</dimen>
+    <dimen name="corner_remote_round_button">45dp</dimen>
+
+    <!-- BORDERS -->
+    <dimen name="no_border">0dp</dimen>
+
+    <!-- OTHER SIZES -->
+    <dimen name="no_animation">0dp</dimen>
+    <dimen name="progressbar_size">100dp</dimen>
+
+
+
+    <!-- __________________________________________________________ -->
+    <!-- |                                                        | -->
+    <!-- |                        MATERIAL                        | -->
+    <!-- |________________________________________________________| -->
+
+
+    <!-- MATERIAL HEIGHT SIZES -->
+    <dimen name="material_height_list_item">56dp</dimen>
+    <dimen name="material_height_toolbar">56dp</dimen>
+    <dimen name="material_height_item">56dp</dimen>
+    <dimen name="material_min_press_button">48dp</dimen>
+
+    <!-- MATERIAL MARGINS & PADDING -->
+    <dimen name="material_classic_padding">16dp</dimen>
+    <dimen name="material_classic_padding_half">8dp</dimen>
+    <dimen name="material_classic_padding_quarter">4dp</dimen>
+    <dimen name="material_margin_dialogs">24dp</dimen>
+    <dimen name="material_margin_bottom_dialogs_title">20dp</dimen>
+
+    <!-- MATERIAL TEXT SIZES -->
+    <dimen name="material_text_size_body">14sp</dimen>
+    <dimen name="material_text_size_subhead">16sp</dimen>
+    <dimen name="material_text_size_button">14sp</dimen>
+    <dimen name="material_text_size_title">20sp</dimen>
+
+</resources>

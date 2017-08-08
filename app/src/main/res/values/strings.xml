@@ -1,0 +1,296 @@
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~ Copyright 2017 Qualcomm Technologies International, Ltd.                                      ~
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+<resources>
+
+    <string name="app_name">GAIA Control v3</string>
+    <string name="empty_content_description" />
+
+<!-- COMPONENT - BUTTON -->
+
+    <string name="button_ok">OK</string>
+    <string name="button_connect">CONNECT</string>
+    <string name="button_connect_ble">CONNECT BLE</string>
+    <string name="button_connect_br_edr">CONNECT BR/EDR</string>
+    <string name="button_disconnect">DISCONNECT</string>
+    <string name="button_start_upgrade">START UPGRADE</string>
+    <string name="button_previous">PREVIOUS</string>
+    <string name="button_abort">ABORT</string>
+    <string name="button_continue">CONTINUE</string>
+    <string name="button_reset">RESET</string>
+
+
+<!-- COMPONENT - ALERTS -->
+
+    <string name="alert_permissions_title">Permissions required</string>
+    <string name="alert_permissions_message">Please enable Location permission which is required to scan for
+        LE devices.</string>
+    <string name="alert_no_file_selected_title">No available file</string>
+    <string name="alert_no_file_selected_message">There is no file selected or the selected file cannot be retrieved.
+        <br/>Please choose another file.</string>
+    <string name="alert_not_a_bin_file_title">Not a bin file</string>
+    <string name="alert_not_a_bin_file_message">The selected file is not a bin file. This application only supports
+        using a bin file for the upgrade.<br/>Please choose another file.</string>
+
+    <!-- ALERT - FILE ERROR -->
+    <string name="alert_file_error_title">File error</string>
+    <string name="alert_file_error_message">Error when attempting to retrieve the selected file. Please try
+        again or select another one.</string>
+
+    <!-- ALERT - RECONNECTION -->
+    <string name="alert_reconnection_title">Device disconnected</string>
+    <string name="alert_reconnection_message">Waiting for reconnection</string>
+
+    <!-- ALERT - UPGRADE COMPLETE -->
+    <string name="alert_upgrade_complete_title">Upgrade complete</string>
+    <string name="alert_upgrade_complete_message">The upgrade has successfully completed.</string>
+
+    <!-- ALERT - UPGRADE ALERT LOW BATTERY -->
+    <string name="alert_upgrade_low_battery_message">The battery is low on your audio device. Please connect it to a charger.</string>
+    <string name="alert_upgrade_low_battery_title">Low battery</string>
+
+    <!-- ALERT - UPGRADE COMMIT -->
+    <string name="alert_upgrade_commit_message">The data has been uploaded on the board and the board is ready for
+        the commit process. Do you want to commit your upload?</string>
+    <string name="alert_upgrade_commit_title">Data commit</string>
+
+    <!-- ALERT - UPGRADE TRANSFER COMPLETE -->
+    <string name="alert_upgrade_transfer_complete_message">Would you like to proceed?</string>
+    <string name="alert_upgrade_transfer_complete_title">File transfer complete</string>
+
+    <!-- ALERT - UPGRADE SYNC ID DIFFERENT -->
+    <string name="alert_upgrade_sync_id_different_message">A previous unfinished upgrade has been processed with a
+        different file. By continuing the current upgrade the device will loose all information from that
+        previous upgrade.<br/>Do you want to continue?</string>
+    <string name="alert_upgrade_sync_id_different_title">File transfer complete</string>
+
+
+<!-- TOAST -->
+
+    <string name="toast_not_implemented">Not implemented yet</string>
+    <string name="toast_gaia_not_supported">Gaia service not supported</string>
+    <string name="toast_not_connected">Device not connected</string>
+    <string name="toast_connection_error_failed">Connection has failed</string>
+    <string name="toast_connection_error_lost">Connection with device is lost</string>
+    <string name="toast_connection_error_unknown">Connection unknown error</string>
+
+
+<!-- LAYOUT - ACTIVITY DEVICES DISCOVERY -->
+
+    <string name="scanned_devices">SCANNED</string>
+    <string name="bonded_devices">BONDED</string>
+    <string name="connect_no_available_scanned_device">No devices discovered.<br/>
+        Please check that your device is advertising and available and that the Bluetooth is enabled on this
+        device.<br/>
+        If you are using Android 6 and above, please also check that the Location permission is enabled for this
+        application and that the service location is enabled.</string>
+    <string name="connect_no_available_paired_device">No paired devices available.</string>
+    <string name="device_type_dual">DUAL device</string>
+    <string name="device_type_le">Low Energy device</string>
+    <string name="device_type_classic">BR/EDR device</string>
+    <string name="device_type_unknown">Unknown device type</string>
+
+
+<!-- LAYOUT - ACTIVITY MAIN -->
+
+    <string name="button_equalizer">Equalizer</string>
+    <string name="button_led">LED</string>
+    <string name="button_tws">TWS</string>
+    <string name="button_upgrade">Upgrade</string>
+    <string name="button_remote">Remote</string>
+    <string name="button_find_device">Find</string>
+    <string name="button_proximity">Proximity</string>
+    <string name="button_battery_level">Battery</string>
+    <string name="button_heart_rate">Heart rate</string>
+
+    <string name="device_state_connected">connected</string>
+    <string name="device_state_disconnected">disconnected</string>
+    <string name="device_state_connecting">connecting&#8230;</string>
+    <string name="device_state_disconnecting">disconnecting&#8230;</string>
+    <string name="device_state_bonded">bonded</string>
+    <string name="device_state_not_bonded">not bonded</string>
+    <string name="device_state_bonding">bonding&#8230;</string>
+    <string name="device_state_connection_unknown">connection unknown</string>
+    <string name="device_state_bond_unknown">bond unknown</string>
+    <string name="text_view_separator">&#160;-&#160;</string>
+
+
+<!-- LAYOUT - ACTIVITY DEVICE INFORMATION -->
+
+    <string name="activity_information_name">Device information</string>
+    <string name="toast_device_information">Device is&#160;</string>
+    <string name="info_name">Device name</string>
+    <string name="info_bluetooth_address">Bluetooth address</string>
+    <string name="info_rssi_signal">RSSI signal</string>
+    <string name="info_battery_level">Battery level</string>
+    <string name="info_battery_status">Battery status</string>
+    <string name="info_battery_status_in_charge">Charging</string>
+    <string name="info_battery_status_no_charge">Not charging</string>
+    <string name="info_api_version">API version</string>
+    <string name="info_no_title" />
+    <string name="info_not_supported">not supported</string>
+
+
+<!-- LAYOUT - ACTIVITY REMOTE CONTROL -->
+
+    <string name="activity_remote_name">Remote control</string>
+    <string name="toast_remote_control_not_supported">The remote control feature is not supported</string>
+
+
+<!-- LAYOUT - ACTIVITY TWS -->
+
+    <string name="activity_tws_name">TWS</string>
+    <string name="tws_right_channel">Right channel</string>
+    <string name="tws_left_channel">Left channel</string>
+    <string name="tws_stereo">Stereo</string>
+    <string name="tws_mono">Mono</string>
+    <string name="tws_master">Master speaker</string>
+    <string name="tws_slave">Slave speaker</string>
+
+
+<!-- LAYOUT - ACTIVITY EQUALISER -->
+
+    <string name="activity_equalizer_name">Equalizer</string>
+    <string name="switch_bass">Bass boost</string>
+    <string name="info_bass_boost_unsupported">Feature Bass Boost unsupported</string>
+    <string name="switch_3d">3D</string>
+    <string name="info_3D_unsupported">Feature 3D unsupported</string>
+    <string name="switch_presets">Presets</string>
+    <string name="info_custom_unsupported">Feature equalizer customization unsupported</string>
+    <string name="equalizer_general_settings">General Settings</string>
+    <string name="preset_0">Bank 0</string>
+    <string name="preset_1">Bank 1</string>
+    <string name="preset_2">Bank 2</string>
+    <string name="preset_3">Bank 3</string>
+    <string name="preset_4">Bank 4</string>
+    <string name="preset_5">Bank 5</string>
+    <string name="preset_6">Bank 6</string>
+    <string name="button_configure">CONFIGURE</string>
+
+
+<!-- LAYOUT - ACTIVITY CUSTOM EQUALIZER -->
+
+    <string name="activity_custom_equalizer_name">Customize bank 1</string>
+    <string name="action_refresh_equalizer">Refresh values</string>
+    <string name="master_gain_title">Master gain</string>
+    <string name="bands_title">Bands</string>
+    <string name="filter_type_title">Filter type</string>
+    <string name="lpf1_name">LPF1</string>
+    <string name="lpf2_name">LPF2</string>
+    <string name="apf1_name">APF1</string>
+    <string name="apf2_name">APF2</string>
+    <string name="hpf1_name">HPF1</string>
+    <string name="hpf2_name">HPF2</string>
+    <string name="ls1_name">LS1</string>
+    <string name="ls2_name">LS2</string>
+    <string name="tilt1_name">Tilt1</string>
+    <string name="tilt2_name">Titl2</string>
+    <string name="hs1_name">HS1</string>
+    <string name="hs2_name">HS2</string>
+    <string name="peq_name">PEQ</string>
+    <string name="bypass_name">BYPASS</string>
+    <string name="band1_name">band 1</string>
+    <string name="band2_name">band 2</string>
+    <string name="band3_name">band 3</string>
+    <string name="band4_name">band 4</string>
+    <string name="band5_name">band 5</string>
+    <string name="frequency_title">F</string>
+    <string name="gain_title">G</string>
+    <string name="quality_title">Q</string>
+    <string name="dialog_incorrect_state_title">Board incorrect state</string>
+    <string name="dialog_incorrect_state_message">Please stream some music to use this feature.</string>
+    <string name="customization_not_supported">The application is not able to set up the connected device.</string>
+
+
+<!-- LAYOUT - ACTIVITY UPGRADE -->
+
+    <string name="activity_upgrade_name">Upgrade</string>
+    <string name="message_no_upgrade_file_available">No file available. Please check the application permissions and
+        enable "Storage".</string>
+
+    <!-- DIALOG - UPGRADE PROGRESS -->
+    <string name="dialog_upgrade_title">Upgrade in progress</string>
+    <string name="dialog_upgrade_error">An error has occurred during the upgrade, the upgrade is aborting.</string>
+    <string name="dialog_upgrade_error_from_board">An error occurred on the board. It sent the following return code
+        information:</string>
+    <string name="dialog_upgrade_error_board_not_ready">The board is not ready for an upgrade, please try again
+        later.</string>
+    <string name="dialog_upgrade_error_exception">An exception occurred during the upgrade. Please try again
+        later or contact your application provider.</string>
+    <string name="dialog_upgrade_error_protocol_exception">A protocol exception occurred during the upgrade. Please try
+        again later or contact your application provider.</string>
+
+
+<!-- LAYOUT - ACTIVITY PROXIMITY -->
+
+    <string name="activity_proximity_name">Proximity profile</string>
+    <string name="link_loss_alert_level_title">Link loss alert level</string>
+    <string name="link_loss_alert_level_subtitle">Set up the link loss alert level</string>
+    <string name="text_unavailable">Unavailable</string>
+    <string name="alert_level_none">NONE</string>
+    <string name="alert_level_mild">MILD</string>
+    <string name="alert_level_high">HIGH</string>
+    <string name="proximity_threshold_title">Immediate alert thresholds</string>
+    <string name="proximity_threshold_subtitle">Set up the mild and high immediate alert thresholds</string>
+    <string name="proximity_threshold_mild">Mild alert at</string>
+    <string name="proximity_threshold_high">High alert at</string>
+    <string name="button_plus">+</string>
+    <string name="button_minus">-</string>
+    <string name="toast_proximity_not_supported">Proximity profile is not supported</string>
+    <string name="toast_proximity_threshold_not_in_range">Mild threshold should be less than High threshold</string>
+    <string name="alert_message_disconnected">Device disconnected</string>
+    <string name="alert_message_disconnecting">Device disconnecting…</string>
+    <string name="alert_message_connection_state_unknown">Unknown connection state</string>
+    <string name="alert_message_connecting">Device connecting…</string>
+
+
+<!-- LAYOUT - ACTIVITY FIND ME -->
+
+    <string name="activity_find_me_name">Find Me profile</string>
+    <string name="find_me_alert_level_title">Find Me alert level</string>
+    <string name="find_me_alert_level_subtitle">Press button to turn on the alert</string>
+    <string name="toast_find_me_not_supported">Find Me profile is not supported</string>
+    <string name="toast_find_me_failed">Failed to send alert</string>
+
+
+<!-- LAYOUT - ACTIVITY BATTERY -->
+
+    <string name="activity_battery_name">Battery</string>
+    <string name="toast_battery_not_supported">Battery service is not supported</string>
+    <string name="battery_name">Battery</string>
+    <string name="battery_description_internal">Internal battery</string>
+    <string name="battery_description_second">Remote battery</string>
+    <string name="battery_description_third">Peer battery</string>
+    <string name="battery_description_unknown">Unknown battery</string>
+
+
+<!-- LAYOUT - ACTIVITY HEART RATE -->
+
+    <string name="activity_heart_rate_name">Heart Rate profile</string>
+    <string name="toast_heart_rate_not_supported">Heart Rate profile is not supported</string>
+    <string name="heart_rate_measurement_title">Heart Rate Measurement</string>
+    <string name="heart_rate_measurement_unit">BPM</string>
+    <string name="heart_rate_energy_title">Energy expended</string>
+    <string name="heart_rate_energy_subtitle">Accumulated since reset</string>
+    <string name="heart_rate_energy_unit">KJ</string>
+    <string name="heart_rate_sensor_contact_title">Sensor Contact status</string>
+    <string name="heart_rate_sensor_contact_status_in_contact">in contact</string>
+    <string name="heart_rate_sensor_contact_status_no_contact">no or poor contact</string>
+    <string name="heart_rate_sensor_contact_status_not_supported">no supported</string>
+    <string name="heart_rate_rr_intervals_title">RR interval(s)</string>
+    <string name="heart_rate_rr_intervals_unit">ms</string>
+    <string name="heart_rate_no_value">-</string>
+    <string name="body_sensor_location_title">Body Sensor Location</string>
+    <string name="body_sensor_location">Location</string>
+    <string name="location_other">other</string>
+    <string name="location_chest">chest</string>
+    <string name="location_wrist">wrist</string>
+    <string name="location_finger">finger</string>
+    <string name="location_hand">hand</string>
+    <string name="location_ear_lobe">ear lobe</string>
+    <string name="location_foot">foot</string>
+    <string name="heart_rate_control_point_title">Heart Rate Control Point</string>
+    <string name="reset_energy_expended_title">Reset energy expended</string>
+
+</resources>

@@ -1,0 +1,26 @@
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~ Copyright 2017 Qualcomm Technologies International, Ltd.                                      ~
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+        android:color="@android:color/darker_gray">
+    <item>
+        <selector>
+            <item android:state_selected="true">
+                <shape xmlns:android="http://schemas.android.com/apk/res/android"
+                       android:shape="oval">
+                    <solid android:color="@color/colorAccent"/>
+                    <corners android:radius="@dimen/no_corner"/>
+                    <stroke android:width="@dimen/no_border"/>
+                </shape>
+            </item>
+            <item>
+                <shape xmlns:android="http://schemas.android.com/apk/res/android"
+                       android:shape="oval">
+                    <solid android:color="@color/button_background"/>
+                    <corners android:radius="@dimen/no_corner"/>
+                    <stroke android:width="@dimen/no_border"/>
+                </shape>
+            </item>
+        </selector>
+    </item>
+</ripple>

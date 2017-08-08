@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~ Copyright 2017 Qualcomm Technologies International, Ltd.                                      ~
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+<resources>
+
+    <!-- MAIN MENU -->
+    <color name="background_tile_disabled">#DDDDDD</color>
+    <color name="text_tile">@color/white</color>
+        <!-- led -->
+        <color name="background_tile_led_on">@color/material_amber_500</color>
+        <color name="ripple_tile_led_on">@color/material_amber_800</color>
+        <color name="background_tile_led_off">@color/material_amber_800</color>
+        <color name="ripple_tile_led_off">@color/material_amber_500</color>
+        <!-- device information -->
+        <color name="background_tile_device">@color/material_red_500</color>
+        <color name="ripple_tile_device">@color/material_red_800</color>
+        <!-- equalizer -->
+        <color name="background_tile_equalizer">@color/material_light_green_500</color>
+        <color name="ripple_tile_equalizer">@color/material_lime_500</color>
+        <!-- find device -->
+        <color name="background_tile_find_device">@color/material_lime_500</color>
+        <color name="ripple_tile_find_device">@color/material_light_green_500</color>
+        <!-- tws -->
+        <color name="background_tile_tws">@color/material_cyan_800</color>
+        <color name="ripple_tile_tws">@color/material_cyan_500</color>
+        <!-- proximity -->
+        <color name="background_tile_proximity">@color/material_cyan_500</color>
+        <color name="ripple_tile_proximity">@color/material_cyan_800</color>
+        <!-- battery level -->
+        <color name="background_tile_battery_level">@color/material_indigo_800</color>
+        <color name="ripple_tile_battery_level">@color/material_indigo_500</color>
+        <!-- remote control -->
+        <color name="background_tile_remote">@color/material_indigo_500</color>
+        <color name="ripple_tile_remote">@color/material_indigo_800</color>
+        <!-- heart rate -->
+        <color name="background_tile_heart_rate">@color/material_deep_purple_500</color>
+        <color name="ripple_tile_heart_rate">@color/material_deep_purple_800</color>
+        <!-- upgrade -->
+        <color name="background_tile_upgrade">@color/material_purple_500</color>
+        <color name="ripple_tile_upgrade">@color/material_purple_800</color>
+
+    <!-- DEVICE INFORMATION LIST -->
+    <color name="information_item_name">@color/primary_text</color>
+    <color name="information_item_value">@color/secondary_text</color>
+
+    <!-- REMOTE -->
+    <color name="button_remote_background">@color/colorPrimary</color>
+    <color name="button_remote_background_pressed">@color/colorAccent</color>
+    <color name="button_remote_image">@color/white</color>
+
+    <!-- SPEAKERS -->
+    <color name="title">@color/colorPrimary</color>
+    <color name="list_divider">#20000000</color>
+
+    <!-- EQUALIZER -->
+    <color name="button_preset_background">@color/windowBackground</color>
+    <color name="button_preset_background_selected">@color/material_deep_orange_50</color>
+    <color name="switch_info">@color/colorAccent</color>
+
+    <!-- CUSTOM EQUALIZER -->
+    <color name="button_background">@color/windowBackground</color>
+
+    <!-- PROXIMITY -->
+    <color name="immediate_alert_none">@color/brand_aqua_mid_tone</color>
+    <color name="immediate_alert_mild">@color/brand_orange_light_tone</color>
+    <color name="immediate_alert_high">@color/brand_red_mid_tone</color>
+    <color name="highlight_bar_background">@color/brand_red_mid_tone</color>
+    <color name="highlight_bar_text">@color/white</color>
+
+    <!-- BATTERY -->
+    <color name="image_battery_level">@color/brand_aqua_mid_tone</color>
+
+
+    <!-- THEME COLOURS -->
+    <color name="colorPrimary">@color/brand_blue_mid_tone</color>
+    <color name="colorPrimaryDark">@color/brand_blue_dark_tone</color>
+    <color name="windowBackground">@color/white</color>
+    <color name="colorAccent">@color/brand_orange_mid_tone</color>
+    <color name="textColorPrimary">@color/primary_text</color>
+    <color name="textColorSecondary">@color/secondary_text</color>
+    <color name="background_toolbar">@color/colorPrimary</color>
+
+    <!-- COMPONENT COLOURS -->
+    <color name="list_item_text_primary">@color/primary_text</color>
+    <color name="list_item_text_secondary">@color/secondary_text</color>
+    <color name="list_item_text_tertiary">@color/tertiary_text</color>
+    <color name="button_flat_background">@color/white</color>
+    <color name="button_flat_text">@color/colorAccent</color>
+    <color name="button_flat_disabled_text">@color/material_button_flat_disabled_text</color>
+    <color name="background_progress_bar">#AAAAAAAA</color>
+
+    <!-- COMPANY COLOURS -->
+    <color name="brand_blue_dark_tone">#002D72</color>
+    <color name="brand_blue_mid_tone">#0033A0</color>
+    <color name="brand_blue_light_tone">#41B6E6</color>
+    <color name="brand_blue_light_tone_95">#E8F7FC</color>
+    <color name="brand_blue_light_tone_80">#A5DDF3</color>
+    <color name="brand_orange_mid_tone">#EA7600</color>
+    <color name="brand_orange_light_tone">#FFB700</color>
+    <color name="brand_red_dark_tone">#D14124</color>
+    <color name="brand_red_mid_tone">#E2231A</color>
+    <color name="brand_aqua_mid_tone">#0096A9</color>
+
+    <!-- ANDROID COLORS -->
+    <color name="white">@android:color/white</color>
+    <color name="primary_text">#DE000000</color>
+    <color name="secondary_text">#8A000000</color>
+    <color name="tertiary_text">#36000000</color>
+
+    <!-- MATERIAL COLORS -->
+    <color name="material_button_flat_disabled_text">#42000000</color>
+    <color name="material_light_green_500">#8BC34A</color>
+    <color name="material_lime_500">#CDDC39</color>
+    <color name="material_amber_500">#FFC107</color>
+    <color name="material_amber_800">#FF8F00</color>
+    <color name="material_red_500">#F44336</color>
+    <color name="material_red_800">#c62828</color>
+    <color name="material_cyan_500">#00BCD4</color>
+    <color name="material_cyan_800">#00838F</color>
+    <color name="material_indigo_500">#3f51b5</color>
+    <color name="material_indigo_800">#283593</color>
+    <color name="material_deep_purple_500">#673ab7</color>
+    <color name="material_deep_purple_800">#4527A0</color>
+    <color name="material_purple_500">#9c27b0</color>
+    <color name="material_purple_800">#6a1b9a</color>
+    <color name="material_deep_orange_50">#fbe9e7</color>
+
+</resources>

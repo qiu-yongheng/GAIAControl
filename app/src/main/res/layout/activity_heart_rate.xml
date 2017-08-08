@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~ Copyright 2017 Qualcomm Technologies International, Ltd.                                      ~
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+
+    <!-- __________________________ TOOLBAR __________________________ -->
+
+    <include
+        android:id="@+id/tb_menu"
+        layout="@layout/toolbar"/>
+
+    <!-- __________________________ DISCONNECTION MESSAGE __________________________ -->
+
+    <TextView
+        android:id="@+id/tv_bar_alert_connection_state"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/highlight_bar_background"
+        android:padding="@dimen/padding_settings_horizontal"
+        android:text="@string/alert_message_disconnected"
+        android:textColor="@color/highlight_bar_text"
+        android:visibility="gone"/>
+
+
+    <!-- __________________________ CONTENT __________________________ -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/layout_heart_rate_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_horizontal"
+            android:orientation="vertical">
+
+        <!-- __________________________ HEART RATE MEASUREMENT __________________________ -->
+
+            <!-- Heart Rate title -->
+            <TextView
+                style="@style/AppTheme.Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/no_margin"
+                android:text="@string/heart_rate_measurement_title"/>
+
+            <!-- Heart Rate measurement unavailable -->
+            <TextView
+                android:id="@+id/tv_heart_rate_measurement_unavailable"
+                style="@style/AppTheme.Text.Secondary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_vertical"
+                android:text="@string/text_unavailable"
+                android:textAlignment="center"
+                android:textStyle="italic"
+                android:visibility="gone"/>
+
+            <!-- __________________________ HEART RATE BPM VALUE __________________________ -->
+            <LinearLayout
+                android:id="@+id/ll_heart_rate_measurement_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_vertical"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/empty_content_description"
+                    android:src="@drawable/ic_heart_rate_128dp"
+                    android:tint="@color/brand_red_dark_tone"/>
+
+                <TextView
+                    android:id="@+id/tv_heart_rate_value"
+                    style="@style/AppTheme.Text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/heart_rate_no_value"
+                    android:textSize="@dimen/text_size_heart_rate_value"/>
+
+                <TextView
+                    style="@style/AppTheme.Text.Secondary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/heart_rate_measurement_unit"/>
+
+            </LinearLayout>
+
+            <!-- __________________________ HEART RATE ENERGY __________________________ -->
+            <LinearLayout
+                android:id="@+id/ll_heart_rate_energy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_vertical"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <!-- Title -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/AppTheme.Text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/heart_rate_energy_title"/>
+
+                    <TextView
+                        style="@style/AppTheme.Text.Secondary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/heart_rate_energy_subtitle"/>
+
+                </LinearLayout>
+
+                <!-- Value -->
+                <TextView
+                    android:id="@+id/tv_heart_rate_energy_value"
+                    style="@style/AppTheme.Subtitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/heart_rate_no_value"
+                    android:textAlignment="viewEnd"
+                    android:textSize="@dimen/text_size_heart_rate_values" />
+
+                <!-- Unit -->
+                <TextView
+                    style="@style/AppTheme.Subtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/material_classic_padding_half"
+                    android:text="@string/heart_rate_energy_unit"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/text_size_heart_rate_values" />
+
+            </LinearLayout>
+
+            <!-- __________________________ HEART RATE SENSOR CONTACT STATUS __________________________ -->
+            <LinearLayout
+                android:id="@+id/ll_heart_rate_sensor_contact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_vertical"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <!-- Title -->
+                <TextView
+                    style="@style/AppTheme.Text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/heart_rate_sensor_contact_title"/>
+
+
+                <!-- Value -->
+                <TextView
+                    android:id="@+id/tv_heart_rate_sensor_contact_status"
+                    style="@style/AppTheme.Subtitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/heart_rate_no_value"
+                    android:textAlignment="viewEnd"
+                    android:textSize="@dimen/text_size_heart_rate_values" />
+
+            </LinearLayout>
+
+            <!-- __________________________ HEART RATE RR INTERVALS __________________________ -->
+            <LinearLayout
+                android:id="@+id/ll_rr_intervals"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_vertical"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_vertical"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <!-- Title -->
+                    <TextView
+                        style="@style/AppTheme.Text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/heart_rate_rr_intervals_title"/>
+
+
+                    <!-- Value if one -->
+                    <TextView
+                        android:id="@+id/tv_rr_interval_one_value"
+                        style="@style/AppTheme.Subtitle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/heart_rate_no_value"
+                        android:textAlignment="viewEnd"
+                        android:textSize="@dimen/text_size_heart_rate_values" />
+
+                    <!-- Unit -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/material_classic_padding_half"
+                        android:text="@string/heart_rate_rr_intervals_unit"
+                        style="@style/AppTheme.Subtitle"
+                        android:textSize="@dimen/text_size_heart_rate_values" />
+
+                </LinearLayout>
+
+                <GridLayout
+                    android:id="@+id/grid_rr_intervals"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:columnCount="3"
+                    android:visibility="gone">
+
+                    <include
+                        layout="@layout/layout_rr_interval"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_columnWeight="1"/>
+
+                </GridLayout>
+
+            </LinearLayout>
+
+
+        <!-- __________________________ BODY SENSOR LOCATION __________________________ -->
+
+            <!-- Body Sensor Location title -->
+            <TextView
+                style="@style/AppTheme.Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_settings_vertical_title"
+                android:text="@string/body_sensor_location_title"/>
+
+            <!-- Body Sensor Location unavailable -->
+            <TextView
+                android:id="@+id/tv_body_sensor_location_unavailable"
+                style="@style/AppTheme.Text.Secondary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_vertical"
+                android:text="@string/text_unavailable"
+                android:textAlignment="center"
+                android:textStyle="italic"
+                android:visibility="gone"/>
+
+            <LinearLayout
+                android:id="@+id/ll_body_sensor_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_vertical"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <!-- Title -->
+                <TextView
+                    style="@style/AppTheme.Text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/body_sensor_location"/>
+
+
+                <!-- Value -->
+                <TextView
+                    android:id="@+id/tv_body_sensor_location"
+                    style="@style/AppTheme.Subtitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/heart_rate_no_value"
+                    android:textAlignment="viewEnd"
+                    android:textSize="@dimen/text_size_heart_rate_values" />
+
+            </LinearLayout>
+
+
+            <!-- __________________________ HEART RATE CONTROL POINT __________________________ -->
+
+            <!-- Heart Rate Control Point title -->
+            <TextView
+                style="@style/AppTheme.Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_settings_vertical_title"
+                android:text="@string/heart_rate_control_point_title"/>
+
+            <!-- Heart Rate Control Point unavailable -->
+            <TextView
+                android:id="@+id/tv_heart_rate_control_point_unavailable"
+                style="@style/AppTheme.Text.Secondary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_vertical"
+                android:text="@string/text_unavailable"
+                android:textAlignment="center"
+                android:textStyle="italic"
+                android:visibility="gone"/>
+
+            <LinearLayout
+                android:id="@+id/ll_reset_energy_expended"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_vertical"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <!-- Title -->
+                <TextView
+                    style="@style/AppTheme.Text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/reset_energy_expended_title" />
+
+                <!-- Action -->
+                <Button
+                    android:id="@+id/bt_reset_energy_expended"
+                    style="@style/AppTheme.Button.Flat"
+                    android:layout_marginEnd="0dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/button_reset"
+                    android:enabled="false" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

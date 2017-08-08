@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~ Copyright 2017 Qualcomm Technologies International, Ltd.                                      ~
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/tl_presets"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <com.qualcomm.gaiacontrol.ui.PresetButton
+                    android:id="@+id/bt_preset_0"
+                    style="@style/AppTheme.Preset"
+                    android:text="@string/preset_0"
+                    android:drawableTop="@drawable/ic_preset_1_light_76dp" />
+
+            <com.qualcomm.gaiacontrol.ui.PresetButton
+                    android:id="@+id/bt_preset_1"
+                    style="@style/AppTheme.Preset"
+                    android:text="@string/preset_1"
+                    android:drawableTop="@drawable/ic_preset_custom_light_76dp" />
+
+            <com.qualcomm.gaiacontrol.ui.PresetButton
+                android:id="@+id/bt_preset_2"
+                style="@style/AppTheme.Preset"
+                android:text="@string/preset_2"
+                android:drawableTop="@drawable/ic_preset_2_light_76dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <com.qualcomm.gaiacontrol.ui.PresetButton
+                android:id="@+id/bt_preset_3"
+                style="@style/AppTheme.Preset"
+                android:text="@string/preset_3"
+                android:drawableTop="@drawable/ic_preset_3_light_76dp" />
+
+            <com.qualcomm.gaiacontrol.ui.PresetButton
+                android:id="@+id/bt_preset_4"
+                style="@style/AppTheme.Preset"
+                android:text="@string/preset_4"
+                android:drawableTop="@drawable/ic_preset_4_light_76dp" />
+
+            <com.qualcomm.gaiacontrol.ui.PresetButton
+                    android:id="@+id/bt_preset_5"
+                    style="@style/AppTheme.Preset"
+                    android:text="@string/preset_5"
+                    android:drawableTop="@drawable/ic_preset_5_light_76dp" />
+        </TableRow>
+
+    <TableRow
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+        <com.qualcomm.gaiacontrol.ui.PresetButton
+                android:id="@+id/bt_preset_6"
+                style="@style/AppTheme.Preset"
+                android:text="@string/preset_6"
+                android:drawableTop="@drawable/ic_preset_6_light_76dp" />
+
+        <Space android:layout_weight="1" />
+
+        <Space android:layout_weight="1" />
+
+    </TableRow>
+
+    </TableLayout>

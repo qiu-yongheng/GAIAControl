@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~ Copyright 2017 Qualcomm Technologies International, Ltd.                                      ~
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TableRow
+            android:layout_weight="1">
+            <Button
+                android:id="@+id/bt_LPF1"
+                android:text="@string/lpf1_name"
+                android:layout_weight="1"
+                style="@style/AppTheme.Button.Flat.Group" />
+            <Button
+                android:id="@+id/bt_LPF2"
+                android:text="@string/lpf2_name"
+                android:layout_weight="1"
+                style="@style/AppTheme.Button.Flat.Group" />
+            <Button
+                android:id="@+id/bt_APF1"
+                android:text="@string/apf1_name"
+                android:layout_weight="1"
+                style="@style/AppTheme.Button.Flat.Group" />
+            <Button
+                android:id="@+id/bt_APF2"
+                android:text="@string/apf2_name"
+                android:layout_weight="1"
+                style="@style/AppTheme.Button.Flat.Group" />
+        </TableRow>
+        <TableRow
+            android:layout_weight="1">
+            <Button
+                android:id="@+id/bt_HPF1"
+                android:text="@string/hpf1_name"
+                android:layout_weight="1"
+                style="@style/AppTheme.Button.Flat.Group" />
+            <Button
+                android:id="@+id/bt_HPF2"
+                android:text="@string/hpf2_name"
+                android:layout_weight="1"
+                style="@style/AppTheme.Button.Flat.Group" />
+            <Button
+                android:id="@+id/bt_LS1"
+                android:text="@string/ls1_name"
+                android:layout_weight="1"
+                style="@style/AppTheme.Button.Flat.Group" />
+            <Button
+                android:id="@+id/bt_LS2"
+                android:text="@string/ls2_name"
+                android:layout_weight="1"
+                style="@style/AppTheme.Button.Flat.Group" />
+        </TableRow>
+        <TableRow
+            android:layout_weight="1">
+            <Button
+                android:id="@+id/bt_Tilt1"
+                android:text="@string/tilt1_name"
+                android:layout_weight="1"
+                style="@style/AppTheme.Button.Flat.Group" />
+            <Button
+                android:id="@+id/bt_Tilt2"
+                android:text="@string/tilt2_name"
+                android:layout_weight="1"
+                style="@style/AppTheme.Button.Flat.Group" />
+            <Button
+                android:id="@+id/bt_HS1"
+                android:text="@string/hs1_name"
+                android:layout_weight="1"
+                style="@style/AppTheme.Button.Flat.Group" />
+            <Button
+                android:id="@+id/bt_HS2"
+                android:text="@string/hs2_name"
+                android:layout_weight="1"
+                style="@style/AppTheme.Button.Flat.Group" />
+        </TableRow>
+        <TableRow
+            android:layout_weight="1">
+            <Button
+                android:id="@+id/bt_PEQ"
+                android:text="@string/peq_name"
+                android:layout_weight="1"
+                style="@style/AppTheme.Button.Flat.Group" />
+            <Button
+                android:id="@+id/bt_BYPASS"
+                android:text="@string/bypass_name"
+                android:layout_weight="1"
+                style="@style/AppTheme.Button.Flat.Group" />
+        </TableRow>
+
+</TableLayout>

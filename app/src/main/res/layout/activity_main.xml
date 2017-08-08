@@ -1,0 +1,171 @@
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~ Copyright 2017 Qualcomm Technologies International, Ltd.                                      ~
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context="com.qualcomm.gaiacontrol.activities.MainActivity"
+                tools:ignore="NestedWeights">
+
+    <include
+        android:id="@+id/tb_menu"
+        layout="@layout/toolbar"/>
+
+    <LinearLayout
+        android:id="@+id/ll_features_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@id/tb_menu"
+        android:padding="@dimen/margin_tiles" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/bt_led"
+                style="@style/AppTheme.Tile.Default"
+                android:layout_width="@dimen/no_layout_width"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/background_tile_disabled"
+                android:drawableTop="@drawable/ic_light_unknown_56dp"
+                android:enabled="false"
+                android:text="@string/button_led"
+                android:visibility="visible"/>
+
+            <include
+                android:id="@+id/bt_device_information"
+                style="@style/AppTheme.Tile.Info"
+                layout="@layout/tile_information"
+                android:layout_width="@dimen/no_layout_width"
+                android:layout_height="match_parent"
+                android:layout_weight="2" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/bt_equalizer"
+                style="@style/AppTheme.Tile.Default"
+                android:layout_width="@dimen/no_layout_width"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:background="@drawable/tile_equalizer"
+                android:drawableStart="@drawable/ic_equalizer_80dp"
+                android:text="@string/button_equalizer" />
+
+            <Button
+                android:id="@+id/bt_find_device"
+                style="@style/AppTheme.Tile.Default"
+                android:layout_width="@dimen/no_layout_width"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/tile_find_device"
+                android:drawableTop="@drawable/ic_find_56dp"
+                android:text="@string/button_find_device" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/bt_proximity"
+                style="@style/AppTheme.Tile.Default"
+                android:layout_width="@dimen/no_layout_width"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/tile_proximity"
+                android:drawableTop="@drawable/ic_proximity_56dp"
+                android:text="@string/button_proximity" />
+
+            <Button
+                android:id="@+id/bt_tws"
+                style="@style/AppTheme.Tile.Default"
+                android:layout_width="@dimen/no_layout_width"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:background="@drawable/tile_tws"
+                android:drawableStart="@drawable/ic_speakers_80dp"
+                android:text="@string/button_tws" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/bt_remote"
+                style="@style/AppTheme.Tile.Default"
+                android:layout_width="@dimen/no_layout_width"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:background="@drawable/tile_remote"
+                android:drawableStart="@drawable/ic_remote_80dp"
+                android:text="@string/button_remote" />
+
+            <Button
+                android:id="@+id/bt_battery_level"
+                style="@style/AppTheme.Tile.Default"
+                android:layout_width="@dimen/no_layout_width"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/tile_battery_level"
+                android:drawableTop="@drawable/ic_battery_56dp"
+                android:text="@string/button_battery_level" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/bt_heart_rate"
+                style="@style/AppTheme.Tile.Default"
+                android:layout_width="@dimen/no_layout_width"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/tile_heart_rate"
+                android:drawableTop="@drawable/ic_heart_rate_56dp"
+                android:text="@string/button_heart_rate" />
+
+            <Button
+                android:id="@+id/bt_upgrade"
+                style="@style/AppTheme.Tile.Default"
+                android:layout_width="@dimen/no_layout_width"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:background="@drawable/tile_upgrade"
+                android:drawableStart="@drawable/ic_upload_80dp"
+                android:text="@string/button_upgrade" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

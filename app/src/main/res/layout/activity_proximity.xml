@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~ Copyright 2017 Qualcomm Technologies International, Ltd.                                      ~
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+    android:id="@+id/layout_proximity_main">
+
+
+    <!-- __________________________ TOOLBAR __________________________ -->
+
+    <include
+        android:id="@+id/tb_menu"
+        layout="@layout/toolbar"/>
+
+
+    <!-- __________________________ DISCONNECTION MESSAGE __________________________ -->
+
+    <TextView
+        android:id="@+id/tv_bar_alert_connection_state"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tb_menu"
+        android:padding="@dimen/padding_settings_horizontal"
+        android:background="@color/highlight_bar_background"
+        android:textColor="@color/highlight_bar_text"
+        android:text="@string/alert_message_disconnected"
+        android:visibility="gone"/>
+
+
+    <!-- __________________________ ALERT LEVEL __________________________ -->
+
+    <!-- Alert level title -->
+    <TextView
+        android:id="@+id/tv_title_link_loss_alert_level"
+        style="@style/AppTheme.Title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_bar_alert_connection_state"
+        android:layout_marginBottom="@dimen/no_margin"
+        android:layout_marginEnd="@dimen/padding_settings_horizontal"
+        android:layout_marginStart="@dimen/padding_settings_horizontal"
+        android:layout_marginTop="@dimen/padding_settings_horizontal"
+        android:text="@string/link_loss_alert_level_title"/>
+
+    <!-- Alert level subtitle -->
+    <TextView
+        android:id="@+id/tv_subtitle_link_loss_alert_level"
+        style="@style/AppTheme.Text.Secondary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_title_link_loss_alert_level"
+        android:layout_marginEnd="@dimen/padding_settings_horizontal"
+        android:layout_marginStart="@dimen/padding_settings_horizontal"
+        android:layout_marginTop="@dimen/no_margin"
+        android:text="@string/link_loss_alert_level_subtitle"/>
+
+    <!-- Alert level unavailable -->
+    <TextView
+        android:id="@+id/tv_link_loss_alert_level_unavailable"
+        style="@style/AppTheme.Text.Secondary"
+        android:layout_width="match_parent"
+        android:textAlignment="center"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_subtitle_link_loss_alert_level"
+        android:layout_marginBottom="@dimen/padding_settings_horizontal"
+        android:layout_marginEnd="@dimen/padding_settings_horizontal"
+        android:layout_marginStart="@dimen/padding_settings_horizontal"
+        android:layout_marginTop="@dimen/no_margin"
+        android:text="@string/text_unavailable"
+        android:textStyle="italic"
+        android:visibility="gone" />
+
+    <!-- Alert level selection -->
+    <LinearLayout
+        android:id="@+id/ll_link_loss_alert_levels"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_link_loss_alert_level_unavailable"
+        android:layout_marginBottom="@dimen/padding_settings_horizontal"
+        android:layout_marginEnd="@dimen/padding_settings_horizontal"
+        android:layout_marginStart="@dimen/padding_settings_horizontal"
+        android:layout_marginTop="@dimen/no_margin"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <!-- no alert level -->
+        <Button
+            android:id="@+id/bt_level_none"
+            style="@style/AppTheme.Button.Flat.Group"
+            android:layout_width="@dimen/no_layout_width"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/alert_level_none"/>
+
+        <!-- mild alert level -->
+        <Button
+            android:id="@+id/bt_level_mild"
+            style="@style/AppTheme.Button.Flat.Group"
+            android:layout_width="@dimen/no_layout_width"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/alert_level_mild"/>
+
+        <!-- high alert level -->
+        <Button
+            android:id="@+id/bt_level_high"
+            style="@style/AppTheme.Button.Flat.Group"
+            android:layout_width="@dimen/no_layout_width"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/alert_level_high"/>
+
+    </LinearLayout>
+
+
+    <!-- __________________________ PROXIMITY THRESHOLD __________________________ -->
+
+    <!-- Proximity threshold title -->
+    <TextView
+        android:id="@+id/tv_title_proximity_threshold"
+        style="@style/AppTheme.Title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_link_loss_alert_levels"
+        android:layout_marginBottom="@dimen/no_margin"
+        android:layout_marginEnd="@dimen/padding_settings_horizontal"
+        android:layout_marginStart="@dimen/padding_settings_horizontal"
+        android:layout_marginTop="@dimen/padding_settings_horizontal"
+        android:text="@string/proximity_threshold_title"/>
+
+    <!-- Proximity threshold subtitle -->
+    <TextView
+        android:id="@+id/tv_subtitle_proximity_threshold"
+        style="@style/AppTheme.Text.Secondary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_title_proximity_threshold"
+        android:layout_marginEnd="@dimen/padding_settings_horizontal"
+        android:layout_marginStart="@dimen/padding_settings_horizontal"
+        android:layout_marginTop="@dimen/no_margin"
+        android:text="@string/proximity_threshold_subtitle"/>
+
+    <!-- Proximity threshold unavailable -->
+    <TextView
+        android:id="@+id/tv_proximity_threshold_unavailable"
+        style="@style/AppTheme.Text.Secondary"
+        android:layout_width="match_parent"
+        android:textAlignment="center"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_subtitle_proximity_threshold"
+        android:layout_marginBottom="@dimen/padding_settings_horizontal"
+        android:layout_marginEnd="@dimen/padding_settings_horizontal"
+        android:layout_marginStart="@dimen/padding_settings_horizontal"
+        android:layout_marginTop="@dimen/no_margin"
+        android:text="@string/text_unavailable"
+        android:textStyle="italic"
+        android:visibility="gone" />
+
+    <!-- Proximity threshold feature -->
+    <LinearLayout
+        android:id="@+id/ll_proximity_threshold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_proximity_threshold_unavailable"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <!-- Selection of the mild threshold -->
+        <LinearLayout
+            android:id="@+id/ll_threshold_mild"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/padding_settings_horizontal"
+            android:layout_marginStart="@dimen/padding_settings_horizontal"
+            android:layout_marginTop="@dimen/no_margin"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                style="@style/AppTheme.Subtitle"
+                android:text="@string/proximity_threshold_mild"
+                android:layout_weight="1"/>
+
+            <!-- Minus button -->
+            <Button
+                android:id="@+id/bt_minus_threshold_mild"
+                style="@style/AppTheme.Button.Flat.Oval"
+                android:layout_width="@dimen/width_threshold_buttons"
+                android:layout_height="wrap_content"
+                android:text="@string/button_minus"
+                android:textSize="@dimen/text_size_threshold_buttons"/>
+
+            <!-- Value -->
+            <EditText
+                android:id="@+id/et_proximity_threshold_mild"
+                android:layout_width="@dimen/width_threshold_edit_text"
+                android:layout_height="wrap_content"
+                android:enabled="true"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:textAlignment="center"
+                tools:ignore="LabelFor"/>
+
+            <!-- Plus button -->
+            <Button
+                android:id="@+id/bt_plus_threshold_mild"
+                style="@style/AppTheme.Button.Flat.Oval"
+                android:layout_width="@dimen/width_threshold_buttons"
+                android:layout_height="wrap_content"
+                android:text="@string/button_plus"
+                android:textSize="@dimen/text_size_threshold_buttons"/>
+
+        </LinearLayout>
+
+        <!-- Selection of the high threshold -->
+        <LinearLayout
+            android:id="@+id/ll_threshold_high"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/padding_settings_horizontal"
+            android:layout_marginStart="@dimen/padding_settings_horizontal"
+            android:layout_marginTop="@dimen/no_margin"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                style="@style/AppTheme.Subtitle"
+                android:text="@string/proximity_threshold_high"
+                android:layout_weight="1"/>
+
+            <!-- Minus button -->
+            <Button
+                android:id="@+id/bt_minus_threshold_high"
+                style="@style/AppTheme.Button.Flat.Oval"
+                android:layout_width="@dimen/width_threshold_buttons"
+                android:layout_height="wrap_content"
+                android:text="@string/button_minus"
+                android:textSize="@dimen/text_size_threshold_buttons"/>
+
+            <!-- Value -->
+            <EditText
+                android:id="@+id/et_proximity_threshold_high"
+                android:layout_width="@dimen/width_threshold_edit_text"
+                android:layout_height="wrap_content"
+                android:enabled="true"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:textAlignment="center"
+                tools:ignore="LabelFor"/>
+
+            <!-- Plus button -->
+            <Button
+                android:id="@+id/bt_plus_threshold_high"
+                style="@style/AppTheme.Button.Flat.Oval"
+                android:layout_width="@dimen/width_threshold_buttons"
+                android:layout_height="wrap_content"
+                android:text="@string/button_plus"
+                android:textSize="@dimen/text_size_threshold_buttons"/>
+
+        </LinearLayout>
+
+        <!-- Proximity threshold display of RSSI level -->
+        <TextView
+            android:id="@+id/tv_signal_values"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/padding_settings_horizontal"
+            android:drawableTop="@drawable/ic_signal_unknown_128dp"
+            android:textAlignment="center"
+            android:drawableTint="@color/immediate_alert_none"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

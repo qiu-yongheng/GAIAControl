@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~ Copyright 2017 Qualcomm Technologies International, Ltd.                                      ~
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+    android:id="@+id/layout_find_me_main">
+
+
+    <!-- __________________________ TOOLBAR __________________________ -->
+
+    <include
+        android:id="@+id/tb_menu"
+        layout="@layout/toolbar"/>
+
+
+    <!-- __________________________ DISCONNECTION MESSAGE __________________________ -->
+
+    <TextView
+        android:id="@+id/tv_bar_alert_connection_state"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tb_menu"
+        android:padding="@dimen/padding_settings_horizontal"
+        android:background="@color/highlight_bar_background"
+        android:textColor="@color/highlight_bar_text"
+        android:text="@string/alert_message_disconnected"
+        android:visibility="gone" />
+
+
+    <!-- __________________________ ALERT LEVEL __________________________ -->
+
+    <!-- Alert level title -->
+    <TextView
+        android:id="@+id/tv_title_find_me_alert_level"
+        style="@style/AppTheme.Title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_bar_alert_connection_state"
+        android:layout_marginBottom="@dimen/no_margin"
+        android:layout_marginEnd="@dimen/padding_settings_horizontal"
+        android:layout_marginStart="@dimen/padding_settings_horizontal"
+        android:layout_marginTop="@dimen/padding_settings_horizontal"
+        android:text="@string/find_me_alert_level_title"/>
+
+    <!-- Alert level subtitle -->
+    <TextView
+        android:id="@+id/tv_subtitle_find_me_alert_level"
+        style="@style/AppTheme.Text.Secondary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_title_find_me_alert_level"
+        android:layout_marginEnd="@dimen/padding_settings_horizontal"
+        android:layout_marginStart="@dimen/padding_settings_horizontal"
+        android:layout_marginTop="@dimen/no_margin"
+        android:text="@string/find_me_alert_level_subtitle"/>
+
+    <!-- Alert level unavailable -->
+    <TextView
+        android:id="@+id/tv_find_me_alert_level_unavailable"
+        style="@style/AppTheme.Text.Secondary"
+        android:layout_width="match_parent"
+        android:textAlignment="center"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_subtitle_find_me_alert_level"
+        android:layout_marginBottom="@dimen/padding_settings_horizontal"
+        android:layout_marginEnd="@dimen/padding_settings_horizontal"
+        android:layout_marginStart="@dimen/padding_settings_horizontal"
+        android:layout_marginTop="@dimen/no_margin"
+        android:text="@string/text_unavailable"
+        android:textStyle="italic"
+        android:visibility="gone" />
+
+    <!-- Alert level selection -->
+    <LinearLayout
+        android:id="@+id/ll_find_me_alert_levels"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_find_me_alert_level_unavailable"
+        android:layout_marginBottom="@dimen/padding_settings_horizontal"
+        android:layout_marginEnd="@dimen/padding_settings_horizontal"
+        android:layout_marginStart="@dimen/padding_settings_horizontal"
+        android:layout_marginTop="@dimen/no_margin"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <!-- no alert level -->
+        <Button
+            android:id="@+id/bt_level_none"
+            style="@style/AppTheme.Button.Flat"
+            android:layout_width="@dimen/no_layout_width"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/alert_level_none"/>
+
+        <!-- mid alert level -->
+        <Button
+            android:id="@+id/bt_level_mild"
+            style="@style/AppTheme.Button.Flat"
+            android:layout_width="@dimen/no_layout_width"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/alert_level_mild"/>
+
+        <!-- high alert level -->
+        <Button
+            android:id="@+id/bt_level_high"
+            style="@style/AppTheme.Button.Flat"
+            android:layout_width="@dimen/no_layout_width"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/alert_level_high"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

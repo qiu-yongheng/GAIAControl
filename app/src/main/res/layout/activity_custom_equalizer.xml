@@ -1,0 +1,143 @@
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~ Copyright 2017 Qualcomm Technologies International, Ltd.                                      ~
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.qualcomm.gaiacontrol.activities.CustomEqualizerActivity">
+
+    <include
+        android:id="@+id/tb_menu"
+        layout="@layout/toolbar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/tb_menu"
+        android:layout_marginTop="@dimen/margin_under_toolbar"
+        android:layout_marginBottom="@dimen/margin_vertical"
+        android:layout_marginEnd="@dimen/margin_horizontal"
+        android:layout_marginStart="@dimen/margin_horizontal">
+
+        <!-- MASTER GAIN -->
+
+        <TextView
+            android:id="@+id/tv_title_master_gain"
+            style="@style/AppTheme.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:text="@string/master_gain_title" />
+
+        <include
+            android:id="@+id/sl_master_gain"
+            layout="@layout/layout_eq_slider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_title_master_gain"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true" />
+
+        <View
+            android:id="@+id/v_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/list_divider"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@id/sl_master_gain" />
+
+        <!-- BANDS -->
+
+        <TextView
+            android:id="@+id/tv_title_bands"
+            style="@style/AppTheme.Title"
+            android:layout_marginTop="@dimen/margin_top_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@id/v_divider"
+            android:text="@string/bands_title" />
+        <include
+            android:id="@+id/ll_bands"
+            layout="@layout/layout_eq_bands"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@id/tv_title_bands" />
+
+
+        <!-- SLIDERS *4 -->
+
+        <LinearLayout
+            android:id="@+id/ll_bars"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@id/ll_bands"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/sl_frequency"
+                layout="@layout/layout_eq_slider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <include
+                android:id="@+id/sl_quality"
+                layout="@layout/layout_eq_slider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <include
+                android:id="@+id/sl_gain"
+                layout="@layout/layout_eq_slider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+        <!-- BAND TYPES -->
+
+        <TextView
+            android:id="@+id/tv_title_types"
+            style="@style/AppTheme.Subtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@id/ll_bars"
+            android:text="@string/filter_type_title" />
+
+        <include
+            android:id="@+id/tl_band_types"
+            layout="@layout/layout_eq_band_types"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@id/tv_title_types" />
+
+    </RelativeLayout>
+
+
+    <!-- LOADER -->
+
+    <include
+        layout="@layout/layout_progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/tb_menu" />
+
+</RelativeLayout>

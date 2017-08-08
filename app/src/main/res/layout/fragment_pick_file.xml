@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~ Copyright 2017 Qualcomm Technologies International, Ltd.                                      ~
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center" >
+
+    <!-- The button to validate the file choice -->
+    <Button
+        android:id="@+id/bt_start_upgrade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_start_upgrade"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        style="@style/AppTheme.Button.Flat" />
+
+    <LinearLayout
+        android:id="@+id/ll_top_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_toolbar"
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true"
+        android:background="@color/brand_blue_light_tone">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/padding_list_item_horizontal"
+            android:layout_marginEnd="@dimen/padding_list_item_horizontal"
+            android:id="@+id/tv_path_title"
+            android:textColor="@color/brand_blue_light_tone_95"
+            android:textSize="@dimen/material_text_size_title"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button_previous"
+            android:id="@+id/bt_previous"
+            android:enabled="false"
+            android:layout_gravity="center_vertical"
+            style="@style/AppTheme.Button.Flat.White" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view_divider_top"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/list_divider"
+        android:layout_below="@id/ll_top_title" />
+
+    <!-- the view divider -->
+    <View
+        android:id="@+id/view_divider_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/list_divider"
+        android:layout_above="@id/bt_start_upgrade"/>
+
+    <!-- the view to display the list of files -->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_files"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view_divider_top"
+        android:layout_above="@id/view_divider_bottom" />
+
+    <!-- the message to display when there is no file available for selection -->
+    <TextView
+        android:id="@+id/tv_no_available_file"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:textSize="@dimen/text_size_no_available_file"
+        android:text="@string/message_no_upgrade_file_available"
+        android:textAlignment="center"
+        android:layout_margin="64dp"/>
+
+</RelativeLayout>

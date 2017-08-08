@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~ Copyright 2017 Qualcomm Technologies International, Ltd.                                      ~
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical" android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:gravity="center">
+
+    <!-- the progress bar to display when the Host is waiting for the Device to reconnect -->
+    <ProgressBar
+        android:layout_width="@dimen/progressbar_size"
+        android:layout_height="@dimen/progressbar_size"
+        android:background="@android:color/transparent"
+        android:indeterminate="true"
+        android:layout_marginTop="@dimen/margin_bottom_dialogs_title"
+        android:layout_marginBottom="@dimen/margin_dialog"/>
+
+    <!-- Message to display with the progress bar -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_dialog"
+        android:layout_marginBottom="@dimen/margin_dialog"
+        android:text="@string/alert_reconnection_message"
+        android:textAlignment="center" />
+
+</LinearLayout>
